@@ -1,4 +1,11 @@
 http:
-  host: localhost
-  port: "8081"
-  path: /getRoutes
+ host: "localhost"
+ port: "8081"
+ path: "/travelOnTipCall/{serviceType}"
+ 
+db:
+ host: "localhost"
+ port: "3306"
+ user: "root"
+ password: "redhat@$#123"
+ database: "amazonrds"
