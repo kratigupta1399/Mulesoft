@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mule xmlns:ee="http://www.mulesoft.org/schema/mule/ee/core" xmlns:http="http://www.mulesoft.org/schema/mule/http"
+	xmlns="http://www.mulesoft.org/schema/mule/core"
+	xmlns:doc="http://www.mulesoft.org/schema/mule/documentation" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/http/current/mule-http.xsd
+http://www.mulesoft.org/schema/mule/ee/core http://www.mulesoft.org/schema/mule/ee/core/current/mule-ee.xsd">
+	<sub-flow name="travelOnTip-getRoutes-implementationSub_Flow" doc:id="701602dd-e54b-43e7-8a15-76e44b132c90" >
+		<http:request method="GET" doc:name="Request To getRoutes-travelOnTip-externalsystem" doc:id="98775b84-929d-48cf-a325-bd325844c8b6" path="${requestor.path}" config-ref="HTTP_Request_TravelOnTip">
+			<http:headers ><![CDATA[#[output application/java
+---
+{
+	"transactionId" : vars.transactionId
+}]]]></http:headers>
+		</http:request>
+		<ee:transform doc:name="response" doc:id="2bf39765-1e81-4c60-89e1-01c36b521836" >
+			<ee:message >
+				<ee:set-payload ><![CDATA[%dw 2.0
+output application/json
+---
+payload map((item,index) -> {
+        "originLocation" : {
+            "locationCode" : item.originlocationcode
+        },
+        "destinationLocation" : {
+            "locationCode" : item.destinationlocationcode
+        }
+})]]></ee:set-payload>
+			</ee:message>
+		</ee:transform>
+	</sub-flow>
+</mule>

@@ -1,0 +1,8 @@
+http:
+ host: "localhost"
+ port: "8083"
+requestor:
+ host: "localhost"
+ port: "8081"
+ path: "/travelOnTipCall/routes"
+ schedulepath: "/travelOnTipCall/schedules"
