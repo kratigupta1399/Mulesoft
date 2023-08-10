@@ -2,3 +2,9 @@ http:
  host: "0.0.0.0"
  port: "8081"
  path: "/getRoutes"
+db:
+ host: "localhost"
+ port: "3306"
+ user: "root"
+ password: "redhat@$#123"
+ database: "amazonrds"
