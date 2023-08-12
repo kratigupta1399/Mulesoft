@@ -1,0 +1,14 @@
+http:
+ host: "localhost"
+ port: "8085"
+travel:
+ host: "localhost"
+ port: "8083"
+ path: "/travelOnTip/routes"
+ schedulepath: "/travelOnTip/schedules"
+fast:
+ host: "localhost"
+ port: "8084"
+ path: "/fastGo/routes"
+ schedulepath: "/fastGo/schedules"
+

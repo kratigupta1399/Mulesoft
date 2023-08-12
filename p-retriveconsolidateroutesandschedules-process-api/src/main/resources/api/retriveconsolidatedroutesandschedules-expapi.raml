@@ -1,0 +1,88 @@
+#%RAML 1.0
+title: RetriveConsolidatedRoutesAndSchedules-ExpAPI
+description: This RAML File will Retrive consolidated routes and schedules.
+
+/booking:
+  /{transportType}:
+    /routes:
+      get:
+        headers:
+          transactionId:
+            type: string
+            required: true
+            example: "hdsfhjdh-jxbv859-sjdf7643-3746bbd" 
+        queryParameters:
+          companyName:
+            type: string
+            example: "FastGo"
+            required: false
+          departureLocation:
+            type: string
+            required: false
+            example: "BEN"
+          destinationLocation:
+            type: string
+            required: false
+            example: "SG"
+        responses:
+          200:
+            description: Output Message for getRoutes.
+            body:
+              application/json:
+                example: !include example/getRoute.raml
+          400:
+            body:
+              application/json:
+                example: { "code": "INVALID_PARAMETER", "message": "parameter transportType is missing."}
+          404:
+            body:
+              application/json:
+                example: {"message" : "NOT_FOUND"}
+          500:
+            body:
+              application/json:
+                example: {"message" : "SERVER_ERROR"}             
+    /schedules:
+       get:
+        headers:
+          transactionId:
+            type: string
+            required: true
+            example: "hdsfhjdh-jxbv859-sjdf7643-3746bbd" 
+        queryParameters:
+          companyName:
+            type: string
+            example: "FastGo"
+            required: false
+          departureLocation:
+            type: string
+            required: false
+            example: "KLG"
+          destinationLocation:
+            type: string
+            required: false
+            example: "SG"
+          requestTimeZone:
+            type: string
+            required: false
+            example: "0800"
+        responses:
+          200:
+            description: Output Message for getRoutes.
+            body:
+              application/json:
+                example: !include example/getSchedules.raml 
+          400:
+            body:
+              application/json:
+                example: { "code": "INVALID_PARAMETER", "message": "parameter transportType is missing."}
+          404:
+            body:
+              application/json:
+                example: {"message" : "NOT_FOUND"}
+          500:
+            body:
+              application/json:
+                example: {"message" : "SERVER_ERROR"}           
+
+                  
