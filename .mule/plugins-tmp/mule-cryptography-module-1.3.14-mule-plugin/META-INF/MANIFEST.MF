@@ -1,0 +1,1027 @@
+Manifest-Version: 1.0
+Bundle-SymbolicName: bcpg
+Bnd-LastModified: 1638149873498
+Bundle-RequiredExecutionEnvironment: J2SE-1.5
+Implementation-Vendor-Id: org.bouncycastle
+Application-Library-Allowable-Codebase: *
+Import-Package: org.bouncycastle.asn1;version="1.70",org.bouncycastle.
+ asn1.cryptlib;version="1.70",org.bouncycastle.asn1.edec;version="1.70
+ ",org.bouncycastle.asn1.gnu;version="1.70",org.bouncycastle.asn1.nist
+ ;version="1.70",org.bouncycastle.asn1.pkcs;version="1.70",org.bouncyc
+ astle.asn1.teletrust;version="1.70",org.bouncycastle.asn1.x509;versio
+ n="1.70",org.bouncycastle.asn1.x9;version="1.70",org.bouncycastle.cry
+ pto;version="1.70",org.bouncycastle.crypto.agreement;version="1.70",o
+ rg.bouncycastle.crypto.digests;version="1.70",org.bouncycastle.crypto
+ .ec;version="1.70",org.bouncycastle.crypto.encodings;version="1.70",o
+ rg.bouncycastle.crypto.engines;version="1.70",org.bouncycastle.crypto
+ .generators;version="1.70",org.bouncycastle.crypto.io;version="1.70",
+ org.bouncycastle.crypto.modes;version="1.70",org.bouncycastle.crypto.
+ params;version="1.70",org.bouncycastle.crypto.signers;version="1.70",
+ org.bouncycastle.crypto.util;version="1.70",org.bouncycastle.jcajce.i
+ o;version="1.70",org.bouncycastle.jcajce.spec;version="1.70",org.boun
+ cycastle.jcajce.util;version="1.70",org.bouncycastle.jce.provider;ver
+ sion="1.70",org.bouncycastle.math.ec;version="1.70",org.bouncycastle.
+ math.ec.rfc8032;version="1.70",org.bouncycastle.util;version="1.70",o
+ rg.bouncycastle.util.encoders;version="1.70",org.bouncycastle.util.io
+ ;version="1.70",javax.crypto;resolution:=optional,javax.crypto.interf
+ aces;resolution:=optional,javax.crypto.spec;resolution:=optional
+Export-Package: org.bouncycastle.apache.bzip2;version="1.70",org.bounc
+ ycastle.bcpg;version="1.70";uses:="org.bouncycastle.asn1,org.bouncyca
+ stle.math.ec,org.bouncycastle.util",org.bouncycastle.bcpg.attr;versio
+ n="1.70";uses:="org.bouncycastle.bcpg",org.bouncycastle.bcpg.sig;vers
+ ion="1.70";uses:="org.bouncycastle.bcpg",org.bouncycastle.gpg;version
+ ="1.70";uses:="org.bouncycastle.openpgp,org.bouncycastle.openpgp.oper
+ ator",org.bouncycastle.gpg.keybox;version="1.70";uses:="org.bouncycas
+ tle.openpgp,org.bouncycastle.openpgp.operator",org.bouncycastle.gpg.k
+ eybox.bc;version="1.70";uses:="org.bouncycastle.gpg.keybox",org.bounc
+ ycastle.gpg.keybox.jcajce;version="1.70";uses:="org.bouncycastle.gpg.
+ keybox",org.bouncycastle.openpgp;version="1.70";uses:="org.bouncycast
+ le.bcpg,org.bouncycastle.bcpg.attr,org.bouncycastle.bcpg.sig,org.boun
+ cycastle.gpg,org.bouncycastle.openpgp.operator,org.bouncycastle.util"
+ ,org.bouncycastle.openpgp.bc;version="1.70";uses:="org.bouncycastle.o
+ penpgp",org.bouncycastle.openpgp.examples;version="1.70";uses:="org.b
+ ouncycastle.openpgp",org.bouncycastle.openpgp.jcajce;version="1.70";u
+ ses:="org.bouncycastle.openpgp",org.bouncycastle.openpgp.operator;ver
+ sion="1.70";uses:="org.bouncycastle.asn1,org.bouncycastle.bcpg,org.bo
+ uncycastle.math.ec,org.bouncycastle.openpgp",org.bouncycastle.openpgp
+ .operator.bc;version="1.70";uses:="org.bouncycastle.bcpg,org.bouncyca
+ stle.crypto,org.bouncycastle.crypto.params,org.bouncycastle.openpgp,o
+ rg.bouncycastle.openpgp.operator",org.bouncycastle.openpgp.operator.j
+ cajce;version="1.70";uses:="org.bouncycastle.bcpg,org.bouncycastle.op
+ enpgp,org.bouncycastle.openpgp.operator"
+Bundle-Name: bcpg
+Permissions: all-permissions
+Trusted-Library: true
+Multi-Release: true
+Extension-Name: org.bouncycastle.bcpg
+Application-Name: Bouncy Castle OpenPGP API
+Automatic-Module-Name: org.bouncycastle.pg
+Implementation-Version: 1.70.00.0
+Bundle-ManifestVersion: 2
+Specification-Vendor: BouncyCastle.org
+Tool: Bnd-2.2.0.20130907-154046
+Implementation-Vendor: BouncyCastle.org
+Ant-Version: Apache Ant 1.6.5
+Originally-Created-By: 25.292-b10 (Private Build)
+Bundle-Version: 1.70
+Caller-Allowable-Codebase: *
+Codebase: *
+Created-By: 1.5.0_08 (Sun Microsystems Inc.)
+Specification-Version: 1.1
+
+Name: org/bouncycastle/apache/bzip2/BZip2Constants.class
+SHA-256-Digest: vu5/sbOme/WAk0sn6Nqi4JLPABTktX9fJyh5VOEU0Uc=
+
+Name: org/bouncycastle/bcpg/Packet.class
+SHA-256-Digest: 2JVWJwKCtwphUNIdyhl3DBagk7Sc7xH3xrg30lW1zKw=
+
+Name: org/bouncycastle/openpgp/PGPSecretKey.class
+SHA-256-Digest: 7Nt613gK2PM0NScL8riE6hH3IDeUHx7kz6qqN7RSAoI=
+
+Name: org/bouncycastle/openpgp/examples/PGPExampleUtil.class
+SHA-256-Digest: +Bw1eEOo/zRaNxDmYf7tcglyTMGsUf31Tvo6337xKdo=
+
+Name: org/bouncycastle/bcpg/BCPGInputStream$PartialInputStream.class
+SHA-256-Digest: 2KRBa9MuT4jv1eW0zMlN29kIhL26jkngVl4T/XF78TA=
+
+Name: org/bouncycastle/openpgp/PGPOnePassSignature.class
+SHA-256-Digest: NbuIWyBLu7bZn3VasOiNO5ijUQT1XWV+Y2xo/FQGjCA=
+
+Name: org/bouncycastle/openpgp/PGPExtendedKeyAttribute.class
+SHA-256-Digest: D7L55eqXCrX7X6R4G8PQAsF4KHm/bDUP6YaC0RaJ8lY=
+
+Name: org/bouncycastle/openpgp/operator/jcajce/JcePublicKeyDataDecrypt
+ orFactoryBuilder$1.class
+SHA-256-Digest: dMToHZC3Wf0ha+tey9z7mhwPPHVYNT/iHNuvA4h6xik=
+
+Name: org/bouncycastle/apache/bzip2/CRC.class
+SHA-256-Digest: Yniam1hkpOuiRG0rsnxYfHMIMzWoUfc8ArH5MsHWZrw=
+
+Name: org/bouncycastle/openpgp/operator/jcajce/SHA1PGPDigestCalculator
+ .class
+SHA-256-Digest: QNX/weScyGEaQVdjkueIZsHbUR0fnh4hfQdwW52iIg4=
+
+Name: org/bouncycastle/bcpg/sig/Exportable.class
+SHA-256-Digest: dvjmU78QwKReo/S/9RtW3wjyZs0/PfpGmAWNKss/HN4=
+
+Name: org/bouncycastle/openpgp/operator/bc/SHA1PGPDigestCalculator.cla
+ ss
+SHA-256-Digest: ulMdMmUa2HCm/v28QD74O44yJaY7EzcdBzE0iqvrh0M=
+
+Name: org/bouncycastle/openpgp/PGPPublicKey.class
+SHA-256-Digest: NDvJQ0eMkyCUo4W0GqL7LfLjQsYqjwSOgOhcssjqm+8=
+
+Name: org/bouncycastle/openpgp/PGPSignatureSubpacketGenerator.class
+SHA-256-Digest: PxRJVrtfw1tjhlEN5vexeg24WUIlO/BKs0JE06guDyk=
+
+Name: org/bouncycastle/openpgp/PGPUserAttributeSubpacketVectorGenerato
+ r.class
+SHA-256-Digest: Nt9QSrAnrIXuT0O09QlhSlfqmsJpRo0hKwZFcufyGeg=
+
+Name: org/bouncycastle/openpgp/PGPDataValidationException.class
+SHA-256-Digest: oYUPZGHCkLiDHagGHcHHuey9hDFTxc38S+/MdLmihKE=
+
+Name: org/bouncycastle/bcpg/sig/PrimaryUserID.class
+SHA-256-Digest: aYk6ATOLvwEzgR8AbMyb1Mk8RzL9lSqBEWFrsWsMmWs=
+
+Name: org/bouncycastle/gpg/keybox/Blob.class
+SHA-256-Digest: YkHBO3Xjkaj/S3fOT5i6+DB+ua/6TvH+Phd0qdXbvms=
+
+Name: org/bouncycastle/openpgp/operator/bc/BcPGPContentVerifierBuilder
+ Provider$BcPGPContentVerifierBuilder.class
+SHA-256-Digest: Ec9PBzP6gke9XdVmpQCN8oEYw5ud3urkbdGwO9yWcE8=
+
+Name: org/bouncycastle/openpgp/operator/bc/BcPGPKeyConverter.class
+SHA-256-Digest: iZvPlQwyuL9budQgJMwf7nT002CrHY82ICJryQAAN+Q=
+
+Name: org/bouncycastle/openpgp/operator/jcajce/JcaPGPKeyPair.class
+SHA-256-Digest: UqhICS4f6BJhyq7ei3xO+paPYYO517tAytsvP5om+AU=
+
+Name: org/bouncycastle/openpgp/operator/PGPDataEncryptor.class
+SHA-256-Digest: Sbcg+Ovjela27js7MwEUkeXEqEG57f1rOE2OunKeWyc=
+
+Name: org/bouncycastle/apache/bzip2/CBZip2OutputStream$1.class
+SHA-256-Digest: 6EdfhntwnTrcGveedqR7nx5IQVdrZd/qabSgcoRgIGA=
+
+Name: org/bouncycastle/gpg/keybox/jcajce/JcaKeyBox.class
+SHA-256-Digest: wzWOlLvhGtsnv1Ortl5qDrzm3vuj1+rwq3T9/nF6vO0=
+
+Name: org/bouncycastle/bcpg/BCPGKey.class
+SHA-256-Digest: jRVD9W0qk3X9GtG1yvd3WMq24PI2Tw65UNxWE+ExKZk=
+
+Name: org/bouncycastle/openpgp/PGPSecretKeyRing.class
+SHA-256-Digest: fLD4O7Ev3DPtQQc1/2CvG1c9qDX2g70POfXQqYnLUCU=
+
+Name: org/bouncycastle/bcpg/S2K.class
+SHA-256-Digest: vNMlbRhHzqSpFcLB9RG51DbHF9AypckgPYzjGiabZDY=
+
+Name: org/bouncycastle/bcpg/CRC24.class
+SHA-256-Digest: kXtHzuPUdBy6A8eXHVPVDmRr4fowk9DmrlX+Q2JZZLo=
+
+Name: org/bouncycastle/openpgp/PGPCanonicalizedDataGenerator.class
+SHA-256-Digest: dQpSQROJQXhz0szIIa0JFUxbgqohCfgXe+fVkUf2ros=
+
+Name: org/bouncycastle/gpg/keybox/PublicKeyRingBlob.class
+SHA-256-Digest: hawR1TZcBCXmuxD678fTnr60+vIn6V/1/ZIn1o5nwfI=
+
+Name: org/bouncycastle/openpgp/PGPCanonicalizedDataGenerator$CRLFGener
+ atorStream.class
+SHA-256-Digest: B+iqzocAmJ5w5YWysqA/qtexJPBLTaJpXCxSp+XGubs=
+
+Name: org/bouncycastle/openpgp/bc/BcPGPSecretKeyRing.class
+SHA-256-Digest: rdmGbQa/ek7x4J/pnJ1ZbI3Ejef8wah5r1RMQFDwcKM=
+
+Name: org/bouncycastle/bcpg/StreamUtil.class
+SHA-256-Digest: OlLOCF7qOYGrLIZCpRq/TATVY0MYvcB4liDCOoNuRqQ=
+
+Name: org/bouncycastle/bcpg/SymmetricKeyEncSessionPacket.class
+SHA-256-Digest: cRuV3YbszxeQL1GgBgayiLMJyYY+ju3fZ0b8V54EOUI=
+
+Name: org/bouncycastle/gpg/keybox/KeyBlob.class
+SHA-256-Digest: AFQQgKebfiecM58IP6Sxa2fopsjJJilZkTmGzpnLGBc=
+
+Name: org/bouncycastle/bcpg/SymmetricKeyAlgorithmTags.class
+SHA-256-Digest: TQ0H/sEJkIfU2KdWSjdiU2SGug4dS4L98/jU/KPRgm4=
+
+Name: org/bouncycastle/bcpg/ECDHPublicBCPGKey.class
+SHA-256-Digest: DxRn2+0ETPSjS2+bmf2a84cv5KlwHxOaNL+Ov9Z0Fp8=
+
+Name: org/bouncycastle/openpgp/operator/jcajce/JcaPGPDigestCalculatorP
+ roviderBuilder.class
+SHA-256-Digest: mv2Ldj89H+B6QYjbgiRGiEw+Ij6V7GBdWmlnKCwghp8=
+
+Name: org/bouncycastle/openpgp/ExtendedPGPSecretKey.class
+SHA-256-Digest: R96IAODyGPZqZvVf/tAz5FepBG/Kb4dRQpOm4yaySZE=
+
+Name: org/bouncycastle/bcpg/SignatureSubpacketInputStream.class
+SHA-256-Digest: UK1x0B2fQNqo4txL5uLB8ry/bDLbL9kP4VincsTB0G4=
+
+Name: org/bouncycastle/openpgp/PGPKdfParameters.class
+SHA-256-Digest: MH+LXqgCMrb7DaWerJ4Q0Wf5TQALrM68qPETO/DHApk=
+
+Name: org/bouncycastle/openpgp/examples/PBEFileProcessor.class
+SHA-256-Digest: US8hJ+fhFexyx4VuXR+nktGfgdZPysfWS8mc0Gy06tw=
+
+Name: org/bouncycastle/openpgp/operator/PGPPad.class
+SHA-256-Digest: Fo/bNLO6tcP5ZC1mV3F++v1icQNd/g7jVhjj9eVtTg8=
+
+Name: org/bouncycastle/openpgp/PGPMarker.class
+SHA-256-Digest: Ju5uaSvtngUJu5hQyOiTZsa1U8RQJlBKm9/MEn8fAHs=
+
+Name: org/bouncycastle/openpgp/PGPPublicKeyRingCollection.class
+SHA-256-Digest: uRxlB6Nk+fiVAfvUVnoKOuWhA06qFVr8Nta3hlY84+Y=
+
+Name: org/bouncycastle/openpgp/operator/PBEDataDecryptorFactory.class
+SHA-256-Digest: mcu3OEq9jdQRX0YBw1Vz8/Qci7z8DpZ8sEUgASvoo44=
+
+Name: org/bouncycastle/openpgp/operator/bc/BcPGPDigestCalculatorProvid
+ er.class
+SHA-256-Digest: MPV7s5sjTX38qEopSbM+XIrbBrohvbep9SzgVrXGd2Q=
+
+Name: org/bouncycastle/bcpg/UserAttributeSubpacket.class
+SHA-256-Digest: m9wP8qb0lZZGJDV6RlnaGwmmGaSxqzIYLYmVCP1nib0=
+
+Name: org/bouncycastle/bcpg/PublicKeyAlgorithmTags.class
+SHA-256-Digest: VL1lQykDC98AlWXs1H+RRVGcvsyulpDA9HY4W8mMPD8=
+
+Name: org/bouncycastle/gpg/PGPSecretKeyParser.class
+SHA-256-Digest: UsVHkwPGCeiqzU1dZumpZfEphIEscJIKq8Jd7W+ncwE=
+
+Name: org/bouncycastle/openpgp/PGPUtil.class
+SHA-256-Digest: 8CqOR9fxRY9U6ma+eUad04jaAWERRq2FawJorfv3lnQ=
+
+Name: org/bouncycastle/openpgp/operator/bc/BcPGPDataEncryptorBuilder$M
+ yPGPDataEncryptor.class
+SHA-256-Digest: q/HxT2X2BF5FVjEQvMlMjN8iLNAQwBlLb8PQebg3Bok=
+
+Name: org/bouncycastle/gpg/keybox/jcajce/JcaKeyBoxBuilder.class
+SHA-256-Digest: 8CMqYqAFZVLcFJwWv67F525sDoxJl4zfGPVWc1E1NZM=
+
+Name: org/bouncycastle/openpgp/operator/bc/BcPBEDataDecryptorFactory.c
+ lass
+SHA-256-Digest: qDjylIHhU579b5vbUcku8xbkD2aJtpYjyBGE6hCsrHk=
+
+Name: org/bouncycastle/openpgp/operator/PGPDataDecryptor.class
+SHA-256-Digest: dkW3YH8+cflyMmf5au7UsCDLQg6VvdHK2rQhE7rpJkg=
+
+Name: org/bouncycastle/gpg/SExpression.class
+SHA-256-Digest: sDkxMQw2VFWauLM/sUrN5hG1TYFHfqu6UKIZkzHQmRQ=
+
+Name: org/bouncycastle/gpg/keybox/UserID.class
+SHA-256-Digest: ZWk8+GEgz6Rv6JxDYJ1uWBLLspVs7XZxDWFiCLojaCY=
+
+Name: org/bouncycastle/openpgp/operator/jcajce/OperatorHelper$1.class
+SHA-256-Digest: AfQNTVAuhZzDcsN4ZHY6wq17I4o+1JroVlWxeJ4+qJg=
+
+Name: org/bouncycastle/openpgp/PGPV3SignatureGenerator.class
+SHA-256-Digest: 1F+W+X0Ue20bOS/jMlo5BQA94JlvJMy0gJJ/IHw1w0g=
+
+Name: org/bouncycastle/bcpg/SignaturePacket.class
+SHA-256-Digest: VENclRvjWJGw/GNHl99Qc2O8qRqi6HGM3vJeXGtrqqo=
+
+Name: org/bouncycastle/openpgp/operator/PGPContentVerifierBuilderProvi
+ der.class
+SHA-256-Digest: deUy0/NCBAwyG84I2bnSNaseaHi9snJTkmD0oMFvCvo=
+
+Name: org/bouncycastle/bcpg/UserAttributeSubpacketInputStream.class
+SHA-256-Digest: bYzj/YVgDL2Sq9UZX3kJE3n2s5vTItY/0YMG5HlDmOc=
+
+Name: org/bouncycastle/openpgp/PGPPrivateKey.class
+SHA-256-Digest: 84xVUBaOtDm3xIUobJMcwPhow1m0WQ5rFI/1yHLLZcY=
+
+Name: org/bouncycastle/openpgp/jcajce/JcaPGPSecretKeyRing.class
+SHA-256-Digest: HQ7+m5pMP/Eo/OXSwF549565g39RUKhozS5NuK7/tFQ=
+
+Name: org/bouncycastle/openpgp/PGPCanonicalizedDataGenerator$ArrayCRLF
+ GeneratorStream.class
+SHA-256-Digest: 2OiluxQe8bhhPn+oLZRpd5fd8oAf1IFIe6oKzVRSNP8=
+
+Name: org/bouncycastle/openpgp/operator/jcajce/JcaPGPContentSignerBuil
+ der.class
+SHA-256-Digest: u/NJKa7sZRDx3TmWqCw2F6ddGbl93qCZL7WVag0b3C0=
+
+Name: org/bouncycastle/openpgp/PGPPBEEncryptedData.class
+SHA-256-Digest: obH02oZ5wiWcvFt0Ac6lbrliyHd0GB1IINacyacAMtw=
+
+Name: org/bouncycastle/bcpg/ElGamalSecretBCPGKey.class
+SHA-256-Digest: c4i12hJF96d6LV69keZtGSibWARYjqnd2m2W+3Wd6Bw=
+
+Name: org/bouncycastle/openpgp/operator/bc/BcUtil.class
+SHA-256-Digest: LQLXhpTejv1zXiR6d4yy7OAFk/Knys89AE8NXj3D+o8=
+
+Name: org/bouncycastle/openpgp/operator/PublicKeyDataDecryptorFactory.
+ class
+SHA-256-Digest: 82+2GGJolSKMqSNJ00bmGnCHuiUMIkxQqL9FJ7NE5m8=
+
+Name: org/bouncycastle/bcpg/ModDetectionCodePacket.class
+SHA-256-Digest: ieVle7OSmbJtKuRVYU41xCqrio2a1ZJAvvuvghFFYwk=
+
+Name: org/bouncycastle/bcpg/SecretKeyPacket.class
+SHA-256-Digest: LZ67Sl1II2X+Bo/ai5DhKyzP7KNhzKsRHpxkdNdP7y0=
+
+Name: org/bouncycastle/openpgp/PGPCanonicalizedDataGenerator$ErasableO
+ utputStream.class
+SHA-256-Digest: PqeXlU9eZl5QRs3PDwxc9euiGGOH1muuqt6ZrjAmvDY=
+
+Name: org/bouncycastle/bcpg/sig/RevocationKeyTags.class
+SHA-256-Digest: 7CUrpkze0rEDBCOpilta0Wy2uz3JgaiHWJNHK8MXeYE=
+
+Name: org/bouncycastle/openpgp/operator/jcajce/JcePBESecretKeyDecrypto
+ rBuilder.class
+SHA-256-Digest: J5mhgU9JhSgSNp3oA91Axt0oszp1rUrd/Vw+52sl8Ms=
+
+Name: org/bouncycastle/openpgp/PGPEncryptedDataList.class
+SHA-256-Digest: 6ObLkydXOrODLZ2OeSM3eeS7YMs4ZO+oeQ2/A3RamZs=
+
+Name: org/bouncycastle/openpgp/operator/jcajce/JcePBEKeyEncryptionMeth
+ odGenerator.class
+SHA-256-Digest: PrgIQaWJrCCo1IBfnCKW+eYngTrGbVoNA3iE0rGfaSI=
+
+Name: org/bouncycastle/openpgp/operator/jcajce/JcePBESecretKeyDecrypto
+ rBuilder$1.class
+SHA-256-Digest: XW/VpRnGnydwE6yx/htzis+QgHCn2nOHz5WYK09p9Ug=
+
+Name: org/bouncycastle/bcpg/sig/TrustSignature.class
+SHA-256-Digest: lQ5vhRjqFuRF/yf0NpnSdTh48gt++7HYB9LiP2ZMP98=
+
+Name: org/bouncycastle/openpgp/operator/jcajce/JcaJcePGPUtil.class
+SHA-256-Digest: rwOCSunQqPAZWQN1TDeor3ZVfbPZamEwUdccQFzvuGg=
+
+Name: org/bouncycastle/openpgp/WrappedGeneratorStream.class
+SHA-256-Digest: rkCiVJpZM96pPWjCjrXie27a044tVRXXkiAlp6V4JFc=
+
+Name: org/bouncycastle/openpgp/operator/PGPSecretKeyDecryptorWithAAD.c
+ lass
+SHA-256-Digest: 8qDixQprjuI5Shsd+dHhBuTgqP6R7t5al+3QMj1RDqo=
+
+Name: org/bouncycastle/openpgp/operator/jcajce/JcePGPDataEncryptorBuil
+ der.class
+SHA-256-Digest: 5C0MA+Ca19cUjFSvZs9JljTylGe4B30y2m+UpuPQN20=
+
+Name: org/bouncycastle/openpgp/PGPEncryptedDataGenerator$ClosableBCPGO
+ utputStream.class
+SHA-256-Digest: BshvlSWcwr/qFK3NhV90Y1Z4PhkxS8n5iQkk2BSP/8M=
+
+Name: org/bouncycastle/openpgp/operator/SessionKeyDataDecryptorFactory
+ .class
+SHA-256-Digest: WiHs7LMfctmU1rXdQR2vDypfnipcp3IsR/KNIJDb+iw=
+
+Name: org/bouncycastle/bcpg/BCPGOutputStream.class
+SHA-256-Digest: 9NFCNmTGl9aIcMXeF3F5HHM6oW0pBsa+Lv9hWfh8OtQ=
+
+Name: org/bouncycastle/bcpg/ExperimentalPacket.class
+SHA-256-Digest: KaNav7WKijfZYWDLb+yve22F/Xkv5BHtFUTDGa26IBM=
+
+Name: org/bouncycastle/bcpg/ECPublicBCPGKey.class
+SHA-256-Digest: twL8Vi60iFFj7/SPu39LKM55w0cPJVPlyfpwTKk3nCs=
+
+Name: org/bouncycastle/bcpg/sig/RevocationKey.class
+SHA-256-Digest: 1usucJY+zi2vEGRSwFO82T3V9A8aGV6skDSdf6/ww0U=
+
+Name: org/bouncycastle/openpgp/PGPCompressedDataGenerator$SafeDeflater
+ OutputStream.class
+SHA-256-Digest: 7ol2wUTt2SnsPoOVzPXz924KKIB0a4op/qHz2vlLAjg=
+
+Name: org/bouncycastle/bcpg/CompressedDataPacket.class
+SHA-256-Digest: 0XnKzwTeOiNVtEaEBIkrvHugW6VChstp6lx+NpTOzaI=
+
+Name: org/bouncycastle/openpgp/PGPExtendedKeyAttribute$1.class
+SHA-256-Digest: odii6HU1hCdl/bs4XEJ35PST1J84NrgzAkARoi229IA=
+
+Name: org/bouncycastle/bcpg/ElGamalPublicBCPGKey.class
+SHA-256-Digest: EiLMhucT7foB5UzLevWBKdsLIuxdMR0+BU5ksgvyk30=
+
+Name: org/bouncycastle/openpgp/operator/bc/BcPGPKeyPair.class
+SHA-256-Digest: KxMwuuclnwBQ/Fq0X6AFbuQSEZvWlYEl5W+Gm0/ERvU=
+
+Name: org/bouncycastle/bcpg/sig/SignatureExpirationTime.class
+SHA-256-Digest: bc0Tly4bnJ7OZqaPiWazljl5JEBf7zozctskkhvQjqs=
+
+Name: org/bouncycastle/apache/bzip2/CBZip2OutputStream$StackElem.class
+SHA-256-Digest: 8nsgj7jr2CZIE2mLSxzXrjLJD3TzMfpkSWPdv3VcSR0=
+
+Name: org/bouncycastle/openpgp/operator/jcajce/JcaPGPDigestCalculatorP
+ roviderBuilder$DigestOutputStream.class
+SHA-256-Digest: 5y1YO5mFQdk6hEIpqLUEIbTehU9bLRLCkkH5+z/Y190=
+
+Name: org/bouncycastle/openpgp/bc/BcPGPPublicKeyRing.class
+SHA-256-Digest: 0QVZAwX4CY78r8KSERRM8pzYNbFy3bON0wReFfaOcJQ=
+
+Name: org/bouncycastle/bcpg/RSASecretBCPGKey.class
+SHA-256-Digest: ixE5DvvvsHfvjYtUDDop6uxsVy/0cCaHlGMqXcSiLMc=
+
+Name: org/bouncycastle/openpgp/operator/jcajce/JcePBEProtectionRemover
+ Factory$1.class
+SHA-256-Digest: cgFDKpR9S4+zgJnnRW1Y2Ce+gj11ps2lNisVceOraUs=
+
+Name: org/bouncycastle/gpg/keybox/Blob$1.class
+SHA-256-Digest: k3X1XS1ysjr1UdX24K15S8XoqY4yl1xc5MkytBGBUtA=
+
+Name: org/bouncycastle/gpg/keybox/bc/BcBlobVerifier.class
+SHA-256-Digest: uR4k4JfD4U+lMEJjPmQWxyBjTWnSwGmvPTmUGsLstrA=
+
+Name: org/bouncycastle/openpgp/jcajce/JcaPGPPublicKeyRingCollection.cl
+ ass
+SHA-256-Digest: WEyxtaBq0tm5XfouoHTDteCqjTJBj+HUimPoGOWY/eI=
+
+Name: org/bouncycastle/openpgp/PGPObjectFactory.class
+SHA-256-Digest: 51f02hvp/3MPHpxwhEgeu2xdxVBWr5Ee2daiY8OUlLk=
+
+Name: org/bouncycastle/openpgp/operator/PublicKeyKeyEncryptionMethodGe
+ nerator.class
+SHA-256-Digest: 5fwJ9OtPBZUNVNK+bGDGSgzi4nI/yS+dpLwDRNk1T7s=
+
+Name: org/bouncycastle/openpgp/operator/jcajce/JcaPGPDigestCalculatorP
+ roviderBuilder$1.class
+SHA-256-Digest: cOK6pC5HLpyIc2LANg2pv9sJtI95ooEYFnlBxJ3KT6Y=
+
+Name: org/bouncycastle/openpgp/PGPSignatureList.class
+SHA-256-Digest: e8vR8f5sZCtmZ3NXSZ2h6Jrt0DMkK6OGWtgHptXvt/I=
+
+Name: org/bouncycastle/openpgp/jcajce/JcaPGPPublicKeyRing.class
+SHA-256-Digest: eqe8h4oZ3Vlj62Os8degvTayC7rZEvMeOs4FpRZMep8=
+
+Name: org/bouncycastle/bcpg/sig/KeyExpirationTime.class
+SHA-256-Digest: MBEoBGNd9fyWUIprk5U69eX9PNy7RMBi4P/1lmGQVzA=
+
+Name: org/bouncycastle/openpgp/examples/DetachedSignatureProcessor.cla
+ ss
+SHA-256-Digest: WhgtPTHSKeTpjxR4jdWR8b+mG+X607XiG4bbeU10tfI=
+
+Name: org/bouncycastle/openpgp/operator/jcajce/JcePublicKeyKeyEncrypti
+ onMethodGenerator.class
+SHA-256-Digest: M1gnbtCJQYxO0Ibb+yTQZoZ0ILfgl3ilR1ucvb8zTmc=
+
+Name: org/bouncycastle/bcpg/DSASecretBCPGKey.class
+SHA-256-Digest: agYRPJWVEARgZXCzCDOa8x8Qa8lWsyg5U5W5h4md8ZE=
+
+Name: org/bouncycastle/openpgp/operator/jcajce/JcePBEProtectionRemover
+ Factory.class
+SHA-256-Digest: N2R1vAp1oMZbFqV0pSHU+69QcB48PacyQT/wLKHt6/Y=
+
+Name: org/bouncycastle/openpgp/PGPKeyRing.class
+SHA-256-Digest: ycMvrh0NZSOPfuwcP4AOwxX2hNhnPCMEk+Q+T7zbpnU=
+
+Name: org/bouncycastle/openpgp/jcajce/JcaPGPSecretKeyRingCollection.cl
+ ass
+SHA-256-Digest: DaGkfiGVXShaKfJploUF5oez0pOXQ0k8RjBa3T05UqM=
+
+Name: org/bouncycastle/openpgp/operator/jcajce/JcaPGPContentSignerBuil
+ der$1.class
+SHA-256-Digest: Ay/peQpCWuRJyP/fv+SrZY0IrcXDrUZCs8NjYB7sqs4=
+
+Name: org/bouncycastle/bcpg/PublicKeyEncSessionPacket.class
+SHA-256-Digest: bS90RpHJMWo6J9VAkZQQFZfx1vVhBdBjznUZJBA8BmQ=
+
+Name: org/bouncycastle/bcpg/HashAlgorithmTags.class
+SHA-256-Digest: 29RfsxLqOzbiCOxzXL4drjpJHygSlbUbQEYTOIi/KTY=
+
+Name: org/bouncycastle/openpgp/StreamGenerator.class
+SHA-256-Digest: g636oZEQEYRj1NyYeq1YXsyDeejRKaMcQyx2SPjOz9Y=
+
+Name: org/bouncycastle/bcpg/SignatureSubpacket.class
+SHA-256-Digest: yYVDRfUNkzCjg5Krzrh9pRq3JRS4qmzz2g/C6QfcBr4=
+
+Name: org/bouncycastle/bcpg/ContainedPacket.class
+SHA-256-Digest: c23+K+ugzs0pj7nVd41KdvxdZNBsFFf3tLeKwBACRVU=
+
+Name: org/bouncycastle/openpgp/PGPKeyRingGenerator.class
+SHA-256-Digest: lmGsThykA1BJFR0cToR0QuXYNtOvTG7ddvnTL/NnVdo=
+
+Name: org/bouncycastle/openpgp/operator/PGPDataDecryptorProvider.class
+SHA-256-Digest: rdBQkjGBD3GzIi+chUnE7gKjG/KmPZt3S/IjFtLKmSc=
+
+Name: org/bouncycastle/bcpg/TrustPacket.class
+SHA-256-Digest: NxejKzoADH0bTOFs5YkAoUoqPBQb8nl63QQkdgQ3v5c=
+
+Name: org/bouncycastle/gpg/keybox/KeyInformation.class
+SHA-256-Digest: auUkIK24ROwNRaysn1zXABMupEaXlqF6vZ/H8WeAVGA=
+
+Name: org/bouncycastle/openpgp/operator/jcajce/JcePBEProtectionRemover
+ Factory$2.class
+SHA-256-Digest: ri911kjJ7aRZKX7H6ZOFkKLaM0t8nzPwcF02hgV8C9U=
+
+Name: org/bouncycastle/bcpg/MarkerPacket.class
+SHA-256-Digest: jOSYsJos2FVvHcjP8rxkWm2rvm7PWV2WXwmzS4fWDKk=
+
+Name: org/bouncycastle/openpgp/PGPCompressedData$2.class
+SHA-256-Digest: 0NVFM6XgyHrRURbzUu5ve9JWviS5clUPlqV81gLCDTQ=
+
+Name: org/bouncycastle/openpgp/operator/jcajce/JcaPGPContentVerifierBu
+ ilderProvider$JcaPGPContentVerifierBuilder.class
+SHA-256-Digest: l5yO8eleHMCOIYE6K3OYYXJHXaT3ZTMxaqPEd13/RwY=
+
+Name: org/bouncycastle/bcpg/SymmetricEncDataPacket.class
+SHA-256-Digest: CrDO0JuDxG4woAVyZTIrOwFNU12xVlLg6nfnw634Cgg=
+
+Name: org/bouncycastle/openpgp/operator/jcajce/JceSessionKeyDataDecryp
+ torFactoryBuilder$JceSessionKeyDataDecryptorFactory.class
+SHA-256-Digest: 3Jr3I6AJ6UI3U039tS5OJ9LFOhMNEhZtLxfPXdtMlAw=
+
+Name: org/bouncycastle/bcpg/EdDSAPublicBCPGKey.class
+SHA-256-Digest: 5LwszDzwIi7sy2S7PtsoTEfzDE4QjIpuT5qxiGK6f84=
+
+Name: org/bouncycastle/openpgp/examples/SignedFileProcessor.class
+SHA-256-Digest: xd5liCgCEUMWIF+GML2Kxdie6eEjlQh8+j1LvVc55iI=
+
+Name: org/bouncycastle/openpgp/operator/PGPDigestCalculator.class
+SHA-256-Digest: Vv0/+eYu4UGblhLD5lUnvcMySe7AYw1x09Qwe5OpN+A=
+
+Name: org/bouncycastle/openpgp/operator/jcajce/JcePublicKeyDataDecrypt
+ orFactoryBuilder.class
+SHA-256-Digest: 04K+L3K1gHCQQk2J4+3lYTN02ypr0Ql3JssCKO7uCnU=
+
+Name: org/bouncycastle/openpgp/operator/bc/BcPGPDigestCalculatorProvid
+ er$1.class
+SHA-256-Digest: CrBPwy1WyeUhoV0zk4XaOwGIz5/VcTNFAn0xvN+hcwg=
+
+Name: org/bouncycastle/bcpg/ECDSAPublicBCPGKey.class
+SHA-256-Digest: WXif15E9nIHGX5mpFWN/gF+V1tOOwoRbVJ6JFjwYyaM=
+
+Name: org/bouncycastle/openpgp/PGPEncryptedData$TruncatedStream.class
+SHA-256-Digest: Ws5y71O0NAloBATkMxVlcsyMioYFxRdkRElU2N6TJ7g=
+
+Name: org/bouncycastle/gpg/keybox/BlobVerifier.class
+SHA-256-Digest: hQXnHQ7DHIKFycOmwp5UjDP2T0toQYBSnHckUV8C1qs=
+
+Name: META-INF/versions/9/module-info.class
+SHA-256-Digest: MI4/1wIqtoje3eTS1ywx3VDYQeCxLmO+lnRmIzX1Af4=
+
+Name: org/bouncycastle/openpgp/OpenedPGPKeyData.class
+SHA-256-Digest: rNvY4o2qUGtkxrGo2ym6Orh5HQoj6WJDwy3mwdZbsag=
+
+Name: org/bouncycastle/openpgp/examples/RSAKeyPairGenerator.class
+SHA-256-Digest: x3tHRV8FwEdVavQg+rAqzJLcotOYhRbzfsC1ryVnaAQ=
+
+Name: org/bouncycastle/openpgp/operator/PGPDataDecryptorFactory.class
+SHA-256-Digest: oqt0M1iZX/9laxkZdTmcUI1ceekhpAL8Y8e1XxLVGg8=
+
+Name: org/bouncycastle/openpgp/operator/bc/BcSessionKeyDataDecryptorFa
+ ctory.class
+SHA-256-Digest: B0EQnkiFxQrW3wIZKkOCaAllNf6lppIiDSKN+/CuT2Q=
+
+Name: org/bouncycastle/openpgp/operator/bc/BcPublicKeyKeyEncryptionMet
+ hodGenerator.class
+SHA-256-Digest: Gfg+UhkQVX7JzCrFdxIo0BF0t+Twv6djCRW53MS+lzw=
+
+Name: org/bouncycastle/openpgp/bc/BcPGPSecretKeyRingCollection.class
+SHA-256-Digest: x6cBB+spw2lE91zoK3kKl4mEKE9bFp9qU/hxnlxWeFg=
+
+Name: org/bouncycastle/bcpg/UserAttributeSubpacketTags.class
+SHA-256-Digest: 0Ev1rHY0nVYFutIAI12ikRap+N1Bd3GvVwH2OmrCUDk=
+
+Name: org/bouncycastle/openpgp/operator/jcajce/JcaPGPKeyConverter.clas
+ s
+SHA-256-Digest: 4AVSSnbLYAJl2VO9pQAtEe7d846YE4uJkiMf/psjo6E=
+
+Name: org/bouncycastle/openpgp/OpenedPGPKeyData$UnwrapResult.class
+SHA-256-Digest: pVYgwvhRfnouHp1sGhkcyklgA2auYWCghOAtXvQ+xHQ=
+
+Name: org/bouncycastle/openpgp/PGPCanonicalizedDataGenerator$FileCRLFG
+ eneratorStream.class
+SHA-256-Digest: 8A7g7xZ6hajjUB5Hsjbv9/pucL+fw7mdhMnpPUe8NYw=
+
+Name: org/bouncycastle/openpgp/PGPExtendedKeyHeader.class
+SHA-256-Digest: zFZZ+4Pw03H3zelj0JRPUaICUXYWe2Lm1PtQnJ1Hl/s=
+
+Name: org/bouncycastle/openpgp/examples/PubringDump.class
+SHA-256-Digest: +YZpBR4g7h00RfSPZH7lnGzU1QIiUjL0Q2K9AozxwKw=
+
+Name: org/bouncycastle/openpgp/operator/jcajce/OperatorHelper.class
+SHA-256-Digest: 78RzsU8TsHLAjViVV4XGI7LdoFSXyuYUO22l3icV9CM=
+
+Name: org/bouncycastle/openpgp/operator/bc/BcImplProvider$EdDsaSigner.
+ class
+SHA-256-Digest: AUkpmxSRs3YFe1qu/j0U24j+0P/Ndqzxp1tqfnSdyWc=
+
+Name: org/bouncycastle/openpgp/operator/PBEKeyEncryptionMethodGenerato
+ r.class
+SHA-256-Digest: 18KgUZDVE1/Lt0de3Xmx+sZJ/bN6YpwX9nnI+O5ROR8=
+
+Name: org/bouncycastle/bcpg/ArmoredInputStream.class
+SHA-256-Digest: KjVqBYoz0E/i3J+0Ovks+qyYzaa0Qg6Nqnwn8LXC12o=
+
+Name: org/bouncycastle/openpgp/PGPCompressedDataGenerator$SafeCBZip2Ou
+ tputStream.class
+SHA-256-Digest: bhPngq6MG6b6/xmbywI8c1eGgecKmrkYYg9WJDYi7j4=
+
+Name: org/bouncycastle/bcpg/sig/PreferredAlgorithms.class
+SHA-256-Digest: 2gvPbtYVNJ7BFWFt24QjHK1U57oNCDXrU+FBtZmASbk=
+
+Name: org/bouncycastle/openpgp/operator/bc/SignerOutputStream.class
+SHA-256-Digest: ctoMlmI+jA+Cbb/TW9tYqFlIFTUUzFHPMdD5U8FUnYc=
+
+Name: org/bouncycastle/openpgp/operator/jcajce/JcaPGPContentVerifierBu
+ ilderProvider$JcaPGPContentVerifierBuilder$1.class
+SHA-256-Digest: 1p2qqudK2rWGaMXX/kV3wJJ8xXF3GaEwD+j6hqBbSBc=
+
+Name: org/bouncycastle/openpgp/examples/KeyBasedLargeFileProcessor.cla
+ ss
+SHA-256-Digest: 1gqnQAkcfHSg0Pu+eCcG1clPU4WMlCzJ8sS7M01Pw1I=
+
+Name: org/bouncycastle/openpgp/PGPEncryptedDataGenerator.class
+SHA-256-Digest: W69IMbve4ODOlZ47ocW1swGgozStCf8FSwskeL6WPJ8=
+
+Name: org/bouncycastle/openpgp/operator/PGPContentVerifierBuilder.clas
+ s
+SHA-256-Digest: ID+6DX389GCBiTlTLb495GDfMcGxojglwIuoC6y6q+Y=
+
+Name: org/bouncycastle/openpgp/examples/DSAElGamalKeyRingGenerator.cla
+ ss
+SHA-256-Digest: rIFMHtGG2vMQMnjeRCkb2mJPhryOJeaDkXiHoQ68dLM=
+
+Name: org/bouncycastle/openpgp/operator/bc/BcPBESecretKeyDecryptorBuil
+ der$1.class
+SHA-256-Digest: otXVZQtNiZWT8ixJ5VKeA/ZixQqVqeg5A6Z8zx+lYKE=
+
+Name: org/bouncycastle/openpgp/PGPSignatureSubpacketVector.class
+SHA-256-Digest: WkQE94UjSnyi7z9HJsulGBSff6zjvDb6gb1ONFV8PXw=
+
+Name: org/bouncycastle/openpgp/operator/PBEProtectionRemoverFactory.cl
+ ass
+SHA-256-Digest: I+zjGcxDFTCrMsqXxFi+Z/KnkiHg5MF+QJF8qkjHT00=
+
+Name: org/bouncycastle/bcpg/BCPGInputStream.class
+SHA-256-Digest: 2rA37j43txE3TB5gFOKH8chft+S7avRf9FZMqwDu0OM=
+
+Name: org/bouncycastle/openpgp/examples/KeyBasedFileProcessor.class
+SHA-256-Digest: QYogNkhnmOWZB2bl7Jy+P29yslk8QixjJeCAKglSEUM=
+
+Name: org/bouncycastle/openpgp/PGPSessionKey.class
+SHA-256-Digest: OWZbD+btv6L2XVVJM4Dvdlu/Q6MexRxRdHRN+PWE0xA=
+
+Name: org/bouncycastle/openpgp/operator/jcajce/JcePBESecretKeyEncrypto
+ rBuilder$1.class
+SHA-256-Digest: qliYjwZZ42v2oZzsR4Y6ZVXcswRejIIK5TiiT0B7lbQ=
+
+Name: org/bouncycastle/openpgp/operator/bc/BcKeyFingerprintCalculator.
+ class
+SHA-256-Digest: X83hGaa5WQsYxWptGkvwNy3J2ob/GPl7bCqRPf30l2s=
+
+Name: org/bouncycastle/openpgp/operator/PGPUtil.class
+SHA-256-Digest: HIBsLcv5Osq4HuZQMG0up0Kv+JRCglF3t9Xfky3HpoE=
+
+Name: org/bouncycastle/openpgp/PGPCompressedData.class
+SHA-256-Digest: Yq4AKHy7e8qjUQIj5OQkJY063dPmR/Qfkb4d4h1RaWw=
+
+Name: org/bouncycastle/openpgp/KeyRingIterator.class
+SHA-256-Digest: R8V9P2bFSukbXGgSNAwi1M0+8t3u/IH2uf4y9QpR4N8=
+
+Name: org/bouncycastle/bcpg/OnePassSignaturePacket.class
+SHA-256-Digest: ZHzXKnEjUByOb/NViLaTbd+yvuMarsN/hw+uu+17wOw=
+
+Name: org/bouncycastle/openpgp/operator/jcajce/JcePBEDataDecryptorFact
+ oryBuilder$1.class
+SHA-256-Digest: Gdm+WBWQitDcStJ6Jwhjk/Kl2UcnXj5pvfJZ9E8nkvk=
+
+Name: org/bouncycastle/openpgp/examples/ClearSignedFileProcessor.class
+SHA-256-Digest: Uhe+D14VGP6tdTr7yx0y+kVcC6L9qkFN3GYPsMSE0Ws=
+
+Name: org/bouncycastle/bcpg/sig/SignerUserID.class
+SHA-256-Digest: XIYMnHDC12bgI1nF4XZJTnucIQBWiIuedN8ULv411/U=
+
+Name: org/bouncycastle/bcpg/ArmoredOutputStream.class
+SHA-256-Digest: fORmDA+sera07WX040udz4lZ9ZYprdteCBKsCzz31Ck=
+
+Name: org/bouncycastle/bcpg/sig/IssuerFingerprint.class
+SHA-256-Digest: mMnEB+h/kaiTv0uP7d8KrKdabzU3Dkv83Me3tYi49WY=
+
+Name: org/bouncycastle/openpgp/PGPAlgorithmParameters.class
+SHA-256-Digest: uLNP9cEhR7zhqmcj4UDYqFbvg/KEPuTL4AqeeppPLf4=
+
+Name: org/bouncycastle/openpgp/PGPSecretKeyRingCollection.class
+SHA-256-Digest: ec0jjaoZt6IirW3wi3HV3MPYdwwMSkQ0FjDPcbsfJa8=
+
+Name: org/bouncycastle/openpgp/PGPCompressedData$1.class
+SHA-256-Digest: 5p2APWa86htxJo/ruqjEskX7+5yalirybMXQTQZfZc0=
+
+Name: org/bouncycastle/openpgp/PGPObjectFactory$1.class
+SHA-256-Digest: q0QVbuf0qwp+FFQtT6muhP7Lm1VxkUVV2RsBAsGlZkI=
+
+Name: org/bouncycastle/openpgp/operator/PBESecretKeyDecryptor.class
+SHA-256-Digest: Jy7DN7xc+g3dopOwRHAWw6cIzSQiadQ9Jb9jv9UaskU=
+
+Name: org/bouncycastle/gpg/keybox/CertificateBlob.class
+SHA-256-Digest: 8Ge84Jexmabp+AuVyC1D4kh8zNvoKYY6PxDBLdBMc30=
+
+Name: org/bouncycastle/openpgp/PGPLiteralDataGenerator.class
+SHA-256-Digest: 5YCNwLLnZlRLGimEN6oW7KZd9v2qk0LVr+zy5/p7NDU=
+
+Name: org/bouncycastle/gpg/keybox/jcajce/JcaBlobVerifier.class
+SHA-256-Digest: gAEt6zNHU9e9oG3K4KA/iH/qbsVuZE+idhxzKRh6BYk=
+
+Name: org/bouncycastle/openpgp/operator/bc/BcUtil$1.class
+SHA-256-Digest: je9ryZ6MDanfNXBgliVIpm/hBYeBQ0lyKGTY2+WfnoM=
+
+Name: org/bouncycastle/gpg/keybox/BlobType.class
+SHA-256-Digest: QBlz4PpDkDZBGM/ZLmRZ4B4qmfjwSqmDjgxWeB4kZJg=
+
+Name: org/bouncycastle/gpg/keybox/KeyBox.class
+SHA-256-Digest: oietBn+ls0fSLsxCxVyB6JtgtNVaLUs83hOf03bF3nk=
+
+Name: org/bouncycastle/openpgp/operator/jcajce/JcePBESecretKeyEncrypto
+ rBuilder.class
+SHA-256-Digest: f8oyym0KKlR/YEkLV951kjiXiukPquyBQYzUVNl888E=
+
+Name: org/bouncycastle/bcpg/sig/RevocationReasonTags.class
+SHA-256-Digest: sepx0d1FK75KaXRnoG6RewNLmd795rEEmISlfwavEXU=
+
+Name: org/bouncycastle/openpgp/operator/RFC6637KDFCalculator.class
+SHA-256-Digest: LXemjRtKHbPqM4uH59ci13+17lKlewTGQFFv/n2fRQ4=
+
+Name: org/bouncycastle/bcpg/UserAttributePacket.class
+SHA-256-Digest: o8Fq++6F67bwba/NLH8VZpDXDYxE+7cwEirNvRs83jE=
+
+Name: org/bouncycastle/openpgp/PGPPublicKeyEncryptedData.class
+SHA-256-Digest: gQZHUIQhLssykcJ8fvtZDb0giU/zykuHvrICs38X9Jo=
+
+Name: org/bouncycastle/bcpg/SymmetricEncIntegrityPacket.class
+SHA-256-Digest: LEovbv6Bp3p9kthDA8HQyknFcJq7k47CNCbpThmW6i8=
+
+Name: org/bouncycastle/openpgp/operator/bc/BcPBEKeyEncryptionMethodGen
+ erator.class
+SHA-256-Digest: sVPWHi5NelzlAJM3NxxKdXx/Hl9DyBOWP7gpjLtit6Q=
+
+Name: org/bouncycastle/openpgp/operator/bc/BcPublicKeyDataDecryptorFac
+ tory.class
+SHA-256-Digest: lU/o+wmAHXhv7ybZZWHMgkSg+8XzP5LYmfMYLMxxQ8w=
+
+Name: org/bouncycastle/bcpg/SignatureSubpacketTags.class
+SHA-256-Digest: 0JnwRO3yY6hmx90zTDT9Ynn5GhznGXpwgAjtACch0F8=
+
+Name: org/bouncycastle/openpgp/PGPOnePassSignatureList.class
+SHA-256-Digest: wvbKZcE/mGSpyWkROa2x7kGBu9w2quRJODyzeUZXRxU=
+
+Name: org/bouncycastle/gpg/keybox/KeyBoxByteBuffer.class
+SHA-256-Digest: +eUlwZejKXev/0U4XHjxwBvz/9gUhFgO7J3gl3teO+Y=
+
+Name: org/bouncycastle/openpgp/PGPSignatureGenerator.class
+SHA-256-Digest: fpi/gZOdSV//4mOFTXKK2edd0XbH/iGrinTWeo1BOsc=
+
+Name: org/bouncycastle/bcpg/SecretSubkeyPacket.class
+SHA-256-Digest: NSMfXqYiX7kG4HkmfoaMXgy3t6jqLfFzeoPrcGh8G70=
+
+Name: org/bouncycastle/bcpg/sig/SignatureTarget.class
+SHA-256-Digest: GlKTQZzrk2xFIeF2EsyZNrDZ/EjX8QuVdmLHta1BByU=
+
+Name: org/bouncycastle/openpgp/PGPUserAttributeSubpacketVector.class
+SHA-256-Digest: vjiwnPT9z4kvopHdoF3ZnoKVtp1uZD+KcQCI7+e6xf4=
+
+Name: org/bouncycastle/openpgp/bc/BcPGPPublicKeyRingCollection.class
+SHA-256-Digest: Vda4FWVVVAgZPepigs7eELMSxXT2yPJmf1Yz5Mh4DuU=
+
+Name: org/bouncycastle/bcpg/sig/KeyFlags.class
+SHA-256-Digest: +9KdUz8/djpZ1biz7qVZvoDCaJhTEYp4+eZ6tX1f2js=
+
+Name: org/bouncycastle/bcpg/sig/Revocable.class
+SHA-256-Digest: wcuq2SiiW1Es2ord+WOsvuD53W8ryrWhO1mqrbmdqo8=
+
+Name: org/bouncycastle/gpg/keybox/FirstBlob.class
+SHA-256-Digest: gv5yC2hwd5doQewM6S7hiAP8hWdiWeBud+j9krfgVlc=
+
+Name: org/bouncycastle/openpgp/examples/DirectKeySignature.class
+SHA-256-Digest: yUjd9QWUBs5I8vu/4V/UQGocG+wypQ6TNKDuD+4YEdQ=
+
+Name: org/bouncycastle/openpgp/PGPEncryptedData.class
+SHA-256-Digest: F2VrmJQlhvsupjT7lKWdEPc1BYGKlc0cxn7nEHoLOwQ=
+
+Name: org/bouncycastle/openpgp/operator/jcajce/JcePGPDataEncryptorBuil
+ der$MyPGPDataEncryptor.class
+SHA-256-Digest: mZpOX0G4BBbf08QvZCKS6/ryjaiorn1qpM8tmuJsykE=
+
+Name: org/bouncycastle/openpgp/operator/bc/BcPGPDigestCalculatorProvid
+ er$DigestOutputStream.class
+SHA-256-Digest: V5H+a2YkT0A9Brd9sarz3qPvvRF+CtXLjpfOO/sil+c=
+
+Name: org/bouncycastle/bcpg/OutputStreamPacket.class
+SHA-256-Digest: 8IKKOiz6e6U8BMz2rVlyYsDNbkNS4FdV/NCmkrRImjw=
+
+Name: org/bouncycastle/openpgp/PGPLiteralData.class
+SHA-256-Digest: hhdfFdfweNG7TQO9D5dMCiB54OLRh8G3LQKi9Oao3+U=
+
+Name: org/bouncycastle/openpgp/operator/PGPDigestCalculatorProvider.cl
+ ass
+SHA-256-Digest: D207SNr11qkBFQr0kuvWi4qFUY28Bv752XVs5gIguAI=
+
+Name: org/bouncycastle/openpgp/operator/jcajce/JcaPGPPrivateKey.class
+SHA-256-Digest: C0ByE6nqgne6hyOcFfL/r2E6a/WWMw8cpXRxYFxwixc=
+
+Name: org/bouncycastle/openpgp/PGPKeyValidationException.class
+SHA-256-Digest: HKgQg+qD8h+RGZvsRQtTqRRaQWXth6rfvq7UODBmIzQ=
+
+Name: org/bouncycastle/openpgp/operator/bc/BcPBESecretKeyEncryptorBuil
+ der.class
+SHA-256-Digest: jDSXCOVO8OE4ZV42mB55jdcCoyrkDlaaXIpzevuWPPk=
+
+Name: org/bouncycastle/openpgp/PGPCanonicalizedDataGenerator$Indefinit
+ eCRLFGeneratorStream.class
+SHA-256-Digest: kHahDk4F1ekHiBt4ufQDFHkHmDQ+c/yr6hx2tGZ2WAA=
+
+Name: org/bouncycastle/bcpg/sig/NotationData.class
+SHA-256-Digest: MiIiRyndaxuVGy6OoXfj9bpnqrqyur6e45SfcIB32e4=
+
+Name: org/bouncycastle/bcpg/sig/EmbeddedSignature.class
+SHA-256-Digest: tGGd7oMsod8sNZaWW7NFvi22K3RlzkUNY18ycaNwXoY=
+
+Name: org/bouncycastle/openpgp/operator/jcajce/JcaPGPDigestCalculatorP
+ roviderBuilder$1$1.class
+SHA-256-Digest: B/l7zAnfIhdKjFYTl+/yQiw7pnIIVPgrPAs095oQAOg=
+
+Name: org/bouncycastle/openpgp/PGPSignature.class
+SHA-256-Digest: W9NPAnlToPkkUx05CPvZAxvsYoFvXwwMadL/luOPN0s=
+
+Name: org/bouncycastle/openpgp/PGPException.class
+SHA-256-Digest: HZZNvJVtmrHZugdsuf8SzYlBJQaVQhmsSE2/XYG2cqg=
+
+Name: org/bouncycastle/bcpg/UnsupportedPacketVersionException.class
+SHA-256-Digest: kZT3Mc3stEjxS0NMjR41qD+kEAyF9qK7CGmTM9X+G5k=
+
+Name: org/bouncycastle/bcpg/PacketTags.class
+SHA-256-Digest: mrk3JKUCwOgKlwvNYOUviu5EXLSg0riAc74cSZ0zH9g=
+
+Name: org/bouncycastle/bcpg/PublicKeyPacket.class
+SHA-256-Digest: hhAycP91bmmPyt9Zj+UM4qHfusuDb2oLQH3bSNVagqQ=
+
+Name: org/bouncycastle/bcpg/PublicSubkeyPacket.class
+SHA-256-Digest: 2pUyaM0mCdXATxXRMVFZCIAoRYNEuA4GX+ULwJd32X4=
+
+Name: org/bouncycastle/openpgp/operator/PGPContentVerifier.class
+SHA-256-Digest: j9/9ZWGyfMVT0Sv7IZtOt+QpIpQxgALo9iwC/BXSY2c=
+
+Name: org/bouncycastle/bcpg/sig/IssuerKeyID.class
+SHA-256-Digest: mKujGKxv7a0clTEP9bK0DyxN+GyB+EjSnnVCQ3xyZts=
+
+Name: org/bouncycastle/openpgp/operator/bc/BcPGPContentVerifierBuilder
+ Provider.class
+SHA-256-Digest: Le99vFqXmpnpsu1zX5bcXtVgnEBMKStPhg0mo6A12b4=
+
+Name: org/bouncycastle/openpgp/operator/PGPKeyEncryptionMethodGenerato
+ r.class
+SHA-256-Digest: 8Gz/mzHWcir1kabmYxawgpjjwLCd0tc5ffkzcPgMkkY=
+
+Name: org/bouncycastle/openpgp/PGPUtil$BufferedInputStreamExt.class
+SHA-256-Digest: uiJH+2GRQJ4I+dSMZoaNIymxun3LGO5kFVNr79NkYRc=
+
+Name: org/bouncycastle/openpgp/jcajce/JcaPGPObjectFactory.class
+SHA-256-Digest: rvlfv9Tuia6/f7gSjTuU+qkniOqfHgrAYhEyv2L6MEE=
+
+Name: org/bouncycastle/bcpg/sig/SignatureCreationTime.class
+SHA-256-Digest: K4AE1Q3Uxwc2GWv21VKaPiCIPJnWcmB0HnowmSXqpaI=
+
+Name: org/bouncycastle/openpgp/bc/BcPGPObjectFactory.class
+SHA-256-Digest: 98l/8/Xs6RLzobq0+UORLUrh01rYnY2G7CqGWzxd1DQ=
+
+Name: org/bouncycastle/openpgp/operator/bc/RFC6637KDFCalculator.class
+SHA-256-Digest: GV8iKnNI4X4JMIQKd5MGybYaQAHDIE1bc1BOF7inebU=
+
+Name: org/bouncycastle/bcpg/EdSecretBCPGKey.class
+SHA-256-Digest: DaxOKO2z4bkZwXfrUKkM3aCv0mliwKUaUy0rt4SLeKA=
+
+Name: org/bouncycastle/bcpg/BCPGObject.class
+SHA-256-Digest: A3/clJKCSvV+zsQ2WgVJyX6aMFHSf3egYfLvaB53yBM=
+
+Name: org/bouncycastle/openpgp/operator/bc/BcPGPDataEncryptorBuilder.c
+ lass
+SHA-256-Digest: EZ6SbbHjRIVRjzksVmMRR528nktT+acxN++CMIsm8sA=
+
+Name: org/bouncycastle/bcpg/DSAPublicBCPGKey.class
+SHA-256-Digest: eNGy+wRNkgdVBPyFSWRveUf16BevAvGcaclweBQeHE8=
+
+Name: org/bouncycastle/openpgp/PGPKeyFlags.class
+SHA-256-Digest: A2JRDBjUUrtPZplZLtH09kVvp+q+GYV5ClBm0LrtkxI=
+
+Name: org/bouncycastle/gpg/SExpression$Builder.class
+SHA-256-Digest: Ut7Y7UoR70xvVto+tp3D+nJo/bolQ5EBS/1YXrLAVP4=
+
+Name: org/bouncycastle/bcpg/sig/RevocationReason.class
+SHA-256-Digest: ixH7y8K3ssBshAjEhUptp+xnsLcZda1obBtEokDcbQU=
+
+Name: org/bouncycastle/openpgp/operator/bc/SHA1PGPDigestCalculator$Dig
+ estOutputStream.class
+SHA-256-Digest: 6Mp1EIErgf+jO5S53rtDAGGUlaZrvEqEm+gwbllguf4=
+
+Name: org/bouncycastle/gpg/keybox/jcajce/JcaBlobVerifierBuilder.class
+SHA-256-Digest: sKxZB1zmIcKIWHVND6Rx9qZg47A+PTaAtKkhpRzxtlg=
+
+Name: org/bouncycastle/openpgp/operator/bc/BcPBESecretKeyEncryptorBuil
+ der$1.class
+SHA-256-Digest: BZtlu7GUbaDN2PsGLzsgXlTqrU90VMDFnD6Szs8b8p0=
+
+Name: org/bouncycastle/gpg/SXprUtils$1.class
+SHA-256-Digest: 5rJPl2C69XsMxErQPJcNE3CIBWNle57wwNoWcKhQqiE=
+
+Name: org/bouncycastle/openpgp/PGPUtil$1.class
+SHA-256-Digest: XFmQdb8DOgPmDxk2YlmqBnV5UgXH/0qF+zYdfk7fd/M=
+
+Name: org/bouncycastle/openpgp/PGPCompressedDataGenerator.class
+SHA-256-Digest: s0rUxY4RnTRAvJ5M8n1FYeFkVaULCY1HGjCFCcSOkQ4=
+
+Name: org/bouncycastle/openpgp/examples/ByteArrayHandler.class
+SHA-256-Digest: 3Vn8h1fjQTNVb+yAL+B/JGkOBHRVl7Zoo0oVdDdlS4M=
+
+Name: org/bouncycastle/openpgp/OpenedPGPKeyData$Builder.class
+SHA-256-Digest: cVblCxdSJphlSpYc3QFBmzjLmXGkeKrOn8lxN4JidtQ=
+
+Name: org/bouncycastle/openpgp/PGPRuntimeOperationException.class
+SHA-256-Digest: GkNwh7odZuJCvOFkqIxrTXCkwMl+OeD183wamffaAJU=
+
+Name: org/bouncycastle/gpg/SExpression$1.class
+SHA-256-Digest: /JiC2e/Ue861YVb83ZA1UXj+vrdsxMygm3WpvZIfCMs=
+
+Name: org/bouncycastle/openpgp/Util.class
+SHA-256-Digest: 5VKfe2QDe5jr5b+FW3NQXnV8aQDFEOLOgMqBc0e7v3c=
+
+Name: org/bouncycastle/openpgp/operator/PBESecretKeyEncryptor.class
+SHA-256-Digest: cGdVj6Iv3MnKrqn7iev27DXyug976dUj1tpS7BiHbL8=
+
+Name: org/bouncycastle/openpgp/PGPPublicKeyRing.class
+SHA-256-Digest: A+oldCC6EQOgsHDWs8GR/aWO56AFFm/ea36Bv8Tq0YI=
+
+Name: org/bouncycastle/bcpg/sig/Features.class
+SHA-256-Digest: 5TWGLts/r3PSB/GM/hqunf7y32SUCIJVeAEBVBqmzuM=
+
+Name: org/bouncycastle/bcpg/ECSecretBCPGKey.class
+SHA-256-Digest: 50zyfj+q1VUfIPClzP99eF6VSZG8lrAcgfNy7Zd2pzM=
+
+Name: org/bouncycastle/gpg/SExprParser.class
+SHA-256-Digest: mC2PRqKVOtQRMUQise2XpmlVnfy35c1ciCd6EejTWeY=
+
+Name: org/bouncycastle/bcpg/RSAPublicBCPGKey.class
+SHA-256-Digest: fQ04gqEbZk4ht7ho4dwRuPcBiiPDUYRUXJjBxagNKCE=
+
+Name: org/bouncycastle/bcpg/sig/IntendedRecipientFingerprint.class
+SHA-256-Digest: 72I3rftLa26RbL5gppdaatxdFGWZZM9DSI4izpf272I=
+
+Name: org/bouncycastle/openpgp/PGPExtendedKeyAttribute$Builder.class
+SHA-256-Digest: 48ZYrjGf6CLzVEQ/1P+OeVWYLKba4JpQ7ldppWIr0sc=
+
+Name: org/bouncycastle/openpgp/operator/jcajce/JcePublicKeyDataDecrypt
+ orFactoryBuilder$2.class
+SHA-256-Digest: O3jj8zosZwx7SizR0XHnsftRwhk3H62sUvvaMcBEUsg=
+
+Name: org/bouncycastle/bcpg/attr/ImageAttribute.class
+SHA-256-Digest: +2AtLqolxqkVvXwz/Nl8hFW3l44RRGTJ/49PxMmw06Q=
+
+Name: org/bouncycastle/openpgp/operator/bc/BcImplProvider.class
+SHA-256-Digest: elw/w0c5YZcF65QtgjribCfg/iVGTcBqkyCboWeH0BA=
+
+Name: org/bouncycastle/openpgp/operator/bc/BcPGPContentSignerBuilder$1
+ .class
+SHA-256-Digest: u/q0WFjF2hTxxkxTM9Uvo9ZmuuJEM2eE2JNCarA+VUc=
+
+Name: org/bouncycastle/openpgp/operator/PGPDataEncryptorBuilder.class
+SHA-256-Digest: U3cWHQARfL7KzEoy7qtqSFCKPbKLPY150Huh6KWho94=
+
+Name: org/bouncycastle/gpg/keybox/bc/BcKeyBox.class
+SHA-256-Digest: m551ObWRaDqmHARaicQju5pKioVaSVVT3RAhwW/ARsE=
+
+Name: org/bouncycastle/openpgp/operator/PGPContentSigner.class
+SHA-256-Digest: Ij1+N9Bckh0weklQDTCS05pW1ztEAJ1V4dInql2nbfo=
+
+Name: org/bouncycastle/openpgp/operator/jcajce/JceSessionKeyDataDecryp
+ torFactoryBuilder.class
+SHA-256-Digest: r465EW1dR5GwAM09wV6/A+Fqv0suD5kUmbsaXQGsG4k=
+
+Name: org/bouncycastle/apache/bzip2/CBZip2OutputStream.class
+SHA-256-Digest: XbBRf9aOZ43TiW8xIfIKclnc9THaz7IRXYk5V/Q+Q7I=
+
+Name: org/bouncycastle/openpgp/PGPKeyPair.class
+SHA-256-Digest: eT18RyumsX5ZGkt/QGyV312c9D3WP3bbsO8nKfTqF9E=
+
+Name: org/bouncycastle/apache/bzip2/CBZip2InputStream.class
+SHA-256-Digest: 3TDs34GNV7btdZtshG76Bzs6euOVyqiIHXWYAHbvk6M=
+
+Name: org/bouncycastle/bcpg/LiteralDataPacket.class
+SHA-256-Digest: e5qdpA3sIFlCAy+eBylmjJbJwZjF6jzaHaq3Re/yBCE=
+
+Name: org/bouncycastle/gpg/SExpression$QuotedString.class
+SHA-256-Digest: oWd+nPQJ1hJ0SrIIMdzP3Qouxeaco8z5dBtbdzs0oYc=
+
+Name: org/bouncycastle/bcpg/InputStreamPacket.class
+SHA-256-Digest: XzfjDpZOli0hm0f1bkHH3oAirctJxxaNqjzAgpuC6Js=
+
+Name: org/bouncycastle/openpgp/operator/bc/BcPGPContentVerifierBuilder
+ Provider$BcPGPContentVerifierBuilder$1.class
+SHA-256-Digest: AcMUmWeheSc/XGpq3OH+5rtTtFfK8aphY1hcMVAAy1M=
+
+Name: org/bouncycastle/openpgp/operator/PGPContentSignerBuilder.class
+SHA-256-Digest: IfM/ReVLrfbsJHfvs2AS4cCYFs1EpupX9vpQyFxisN0=
+
+Name: org/bouncycastle/openpgp/operator/bc/BcPGPContentSignerBuilder.c
+ lass
+SHA-256-Digest: WXkVTcxK1kAJAu/yTn78gZMN+ihR4ezxlnDIaKqOMZQ=
+
+Name: org/bouncycastle/bcpg/MPInteger.class
+SHA-256-Digest: NIK9de9fSzGSSyptcDG7DnINh1z9/KYPFF7yKYwRP80=
+
+Name: org/bouncycastle/openpgp/operator/RFC6637Utils.class
+SHA-256-Digest: 1CEm8ttbsMlB0c43vYRohSb/qmNSucrFFANODXx/ExE=
+
+Name: org/bouncycastle/bcpg/UserIDPacket.class
+SHA-256-Digest: pCqrAbixZc4cBZexIU77WdgvhVNJQaCVk9tGatlwxrc=
+
+Name: org/bouncycastle/gpg/SXprUtils.class
+SHA-256-Digest: sMNXQrq8Op6YKliK0S6OlxVToPyypwNxjQLsXeaBUAw=
+
+Name: org/bouncycastle/openpgp/operator/jcajce/JcaKeyFingerprintCalcul
+ ator.class
+SHA-256-Digest: jqUlhQXbneMfsb+yQfsSFUHyEOCjtdSC/lOhxs73QM0=
+
+Name: org/bouncycastle/openpgp/operator/KeyFingerPrintCalculator.class
+SHA-256-Digest: XSkU3Fohl7/4Iv5T/pITqMpSK9PTIOACTYnc9zXNYD8=
+
+Name: org/bouncycastle/openpgp/operator/jcajce/JcePBEDataDecryptorFact
+ oryBuilder.class
+SHA-256-Digest: 5mn6aQSBtqdJRqmdEj2deAuKDQBCYLRDchsAK0rLQU0=
+
+Name: org/bouncycastle/openpgp/operator/bc/BcPBESecretKeyDecryptorBuil
+ der.class
+SHA-256-Digest: Av6tvniOlfwZm15afb0QksDVdNnlpQJ/9nyx0z7bwV8=
+
+Name: org/bouncycastle/openpgp/operator/jcajce/JcaPGPContentVerifierBu
+ ilderProvider.class
+SHA-256-Digest: nSZQDi3uJdryKa9FGjP3bppcsUVGr6Lpgjms5BNI+78=
+
+Name: org/bouncycastle/bcpg/CompressionAlgorithmTags.class
+SHA-256-Digest: 44Y9r+n1bztSP9H3fKcMkCuHxBOttFhFlM+FcKdBkmo=
+

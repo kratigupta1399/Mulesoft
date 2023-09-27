@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns="http://maven.apache.org/POM/4.0.0"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+    <parent>
+        <groupId>org.mule.extensions</groupId>
+        <artifactId>mule-ee-core-modules-parent</artifactId>
+        <version>1.1.9</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.mulesoft.modules</groupId>
+    <artifactId>mule-cryptography-module</artifactId>
+    <version>1.3.14</version>
+
+    <packaging>mule-extension</packaging>
+
+    <name>Mule Cryptography Module</name>
+    <description>A Mule extension that provides functionality to encrypt and sign data</description>
+
+    <properties>
+        <formatterConfigPath>formatter.xml</formatterConfigPath>
+        <muleTestsComponentPlugin>${mule.version}</muleTestsComponentPlugin>
+        <xmlsecVersion>2.3.2</xmlsecVersion>
+        <woodstoxVersion>6.4.0</woodstoxVersion>
+        <commonsLangVersion>3.12.0</commonsLangVersion>
+        <commonsIoVersion>2.11.0</commonsIoVersion>
+        <commonsCodecVersion>1.15</commonsCodecVersion>
+        <xmlunitVersion>1.6</xmlunitVersion>
+        <muleEncryptionVersion>1.2.6</muleEncryptionVersion>
+        <caffeineVersion>2.9.3</caffeineVersion>
+        <xmlApiVersion>2.0.2</xmlApiVersion>
+        <licenseYear>2021</licenseYear>
+        <muleExtensionsShadeVersion>1.0.4</muleExtensionsShadeVersion>
+    </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.mule.runtime</groupId>
+            <artifactId>mule-module-tls</artifactId>
+            <version>${mule.version}</version>
+            <scope>provided</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>org.mule</groupId>
+            <artifactId>mule-encryption</artifactId>
+            <version>${muleEncryptionVersion}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-lang3</artifactId>
+            <version>${commonsLangVersion}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>commons-io</groupId>
+            <artifactId>commons-io</artifactId>
+            <version>${commonsIoVersion}</version>
+        </dependency>
+        <dependency>
+            <groupId>commons-codec</groupId>
+            <artifactId>commons-codec</artifactId>
+            <version>${commonsCodecVersion}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.apache.santuario</groupId>
+            <artifactId>xmlsec</artifactId>
+            <version>${xmlsecVersion}</version>
+            <exclusions>
+                <exclusion>
+                    <groupId>xalan</groupId>
+                    <artifactId>xalan</artifactId>
+                </exclusion>
+                <exclusion>
+                    <groupId>com.fasterxml.woodstox</groupId>
+                    <artifactId>woodstox-core</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+
+        <dependency>
+            <groupId>com.fasterxml.woodstox</groupId>
+            <artifactId>woodstox-core</artifactId>
+            <version>${woodstoxVersion}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.mule.tests</groupId>
+            <artifactId>mule-tests-infrastructure</artifactId>
+            <version>${mule.version}</version>
+            <scope>test</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>org.mule.tests.plugin</groupId>
+            <artifactId>mule-tests-component-plugin</artifactId>
+            <version>${muleTestsComponentPlugin}</version>
+            <classifier>mule-plugin</classifier>
+            <scope>test</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>xmlunit</groupId>
+            <artifactId>xmlunit</artifactId>
+            <version>${xmlunitVersion}</version>
+            <scope>test</scope>
+        </dependency>
+
+       <dependency>
+            <groupId>org.mule.modules</groupId>
+            <artifactId>mule-xml-module</artifactId>
+            <version>1.3.3</version>
+            <classifier>mule-plugin</classifier>
+            <scope>test</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>com.github.ben-manes.caffeine</groupId>
+            <artifactId>caffeine</artifactId>
+            <version>${caffeineVersion}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>xml-apis</groupId>
+            <artifactId>xml-apis</artifactId>
+            <version>${xmlApiVersion}</version>
+        </dependency>
+    </dependencies>
+
+    <repositories>
+        <repository>
+            <id>mulesoft-private</id>
+            <name>Mulesoft internal repository</name>
+            <url>https://repository.mulesoft.org/nexus/content/repositories/private/</url>
+        </repository>
+        <repository>
+            <id>mule</id>
+            <name>Mule Repository</name>
+            <url>https://repository.mulesoft.org/nexus/content/repositories/public/</url>
+        </repository>
+    </repositories>
+    <pluginRepositories>
+        <pluginRepository>
+            <id>mulesoft-private</id>
+            <name>Mulesoft internal repository</name>
+            <url>https://repository.mulesoft.org/nexus/content/repositories/private/</url>
+        </pluginRepository>
+    </pluginRepositories>
+
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.mule.runtime.plugins</groupId>
+                <artifactId>mule-extensions-shade-plugin</artifactId>
+                <version>${muleExtensionsShadeVersion}</version>
+                <executions>
+                    <execution>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>shade</goal>
+                        </goals>
+                    </execution>
+                </executions>
+                <configuration>
+                    <artifactSet>
+                        <includes combine.children="append">
+                            <include>org.bouncycastle:bcpg-jdk15on</include>
+                            <include>org.bouncycastle:bcprov-ext-jdk15to18</include>
+                            <include>org.bouncycastle:bcprov-jdk15on</include>
+                            <include>org.bouncycastle:bcpkix-jdk15on</include>
+                        </includes>
+                    </artifactSet>
+                    <relocations>
+                        <relocation>
+                            <pattern>org.bouncycastle</pattern>
+                            <shadedPattern>org.bouncycastle.shaded</shadedPattern>
+                        </relocation>
+                    </relocations>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+</project>

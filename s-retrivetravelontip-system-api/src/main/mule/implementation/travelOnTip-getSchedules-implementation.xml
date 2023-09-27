@@ -24,7 +24,7 @@ payload map((item,index) -> {
 		"departureDateTime": item.departureDate,
 		"travelRoute": {
 			"destinationLocation": {
-				"locationCode": item.toLocation
+				"locationCode": item.fromLocation
 			},
 			"originLocation": {
 				"locationCode": item.toLocation

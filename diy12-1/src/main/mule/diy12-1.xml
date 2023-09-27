@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mule xmlns:file="http://www.mulesoft.org/schema/mule/file" xmlns:os="http://www.mulesoft.org/schema/mule/os"
+	xmlns:ee="http://www.mulesoft.org/schema/mule/ee/core"
+	xmlns:db="http://www.mulesoft.org/schema/mule/db" xmlns:http="http://www.mulesoft.org/schema/mule/http" xmlns="http://www.mulesoft.org/schema/mule/core" xmlns:doc="http://www.mulesoft.org/schema/mule/documentation" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/http/current/mule-http.xsd
+http://www.mulesoft.org/schema/mule/db http://www.mulesoft.org/schema/mule/db/current/mule-db.xsd
+http://www.mulesoft.org/schema/mule/ee/core http://www.mulesoft.org/schema/mule/ee/core/current/mule-ee.xsd
+http://www.mulesoft.org/schema/mule/os http://www.mulesoft.org/schema/mule/os/current/mule-os.xsd
+http://www.mulesoft.org/schema/mule/file http://www.mulesoft.org/schema/mule/file/current/mule-file.xsd">
+	<http:listener-config name="HTTP_Listener_config" doc:name="HTTP Listener config" doc:id="5f63029f-3505-43ae-b4fe-fb01a91d629a" >
+		<http:listener-connection host="0.0.0.0" port="8081" />
+	</http:listener-config>
+	<db:config name="Database_Config" doc:name="Database Config" doc:id="f7c78a83-7ada-47a6-a244-cd5442fb20fd" >
+		<db:my-sql-connection host="localhost" port="3306" user="root" password="redhat@$#123" database="amazonrds" />
+	</db:config>
+	<file:config name="File_Config" doc:name="File Config" doc:id="4a6de22e-4303-477c-8db4-a5e9fc1c1939" >
+		<file:connection workingDir="C:\Users\BOSS\Desktop" />
+	</file:config>
+	<configuration-properties doc:name="Configuration properties" doc:id="08af132b-09eb-400e-baf9-4e3a13cd2a83" file="config.yaml" />
+	
+	<flow name="read-db-accounts-to-csv-manual-watermarking" doc:id="c4f0641c-091c-4acb-b1d8-fc28884925ca" >
+		<scheduler doc:name="Scheduler" doc:id="0c409391-b1e7-44d6-8a21-f5bca8819e37" >
+			<scheduling-strategy >
+				<fixed-frequency frequency="5" timeUnit="SECONDS"/>
+			</scheduling-strategy>
+		</scheduler>
+		<os:retrieve doc:name="Id" doc:id="53dda0bd-4c10-4e20-a3a9-f12e8dc5a0d0" key="Id" target="Id" targetValue="#[payload.Id]">
+			<os:default-value ><![CDATA[0000]]></os:default-value>
+		</os:retrieve>
+		<db:select doc:name="flights_customers" doc:id="7050f1a2-2347-4938-8965-e20611983b93" config-ref="Database_Config">
+			<db:sql ><![CDATA[SELECT * FROM flight_data WHERE ID > :id]]></db:sql>
+			<db:input-parameters ><![CDATA[#[{
+	id: vars.Id
+}]]]></db:input-parameters>
+		</db:select>
+		<choice doc:name="Choice" doc:id="6f573c1a-f714-4163-96a0-3bcd8d2c986f" >
+			<when expression="#[sizeOf(payload) &gt; 0]">
+				<os:store doc:name="Id" doc:id="13efaa87-2cc2-4781-9a93-33cd210bccaf" key="Id">
+			<os:value><![CDATA[#[max(payload.*ID default [])]]]></os:value>
+		</os:store>
+				<flow-ref doc:name="set-filenames-and-write-csv-files" doc:id="5321e91c-4278-41e5-aca1-41d367d41ac8" name="set-filenames-and-write-csv-files" />
+				<logger level="INFO" doc:name="Logger" doc:id="e3cf75b0-b2f7-47ea-9ee2-46ba2964f287" message="#[output application/json --- payload]" />
+			</when>
+			<otherwise >
+				<logger level="INFO" doc:name="Logger" doc:id="80976d98-4cf0-4c69-85c2-662c5f699849" message='#[output application/json --- {message: "No new records"}]'/>
+			</otherwise>
+		</choice>
+	</flow>
+	<sub-flow name="set-filenames-and-write-csv-files" doc:id="f214aabb-316e-479b-8986-065bea2d6fef">
+		<foreach doc:name="For Each" doc:id="1209db3d-02d0-4284-8206-071e4c21e070" collection="#[message.payload.*Country distinctBy $]">
+					<set-variable value='#[Mule::p("accounts.folder.out") ++ &#10;Mule::p("accounts.filename.name") ++ "-" ++ &#10;dw::core::Strings::dasherize(payload) ++ "-" ++&#10;now() as String {format: "yyyyMMdd"} ++&#10;Mule::p("accounts.filename.ext")]' doc:name="fileName" doc:id="445f57b2-69fb-4d2d-93bd-627e9cf60a23" variableName="fileName" />
+					<ee:transform doc:name="Transform Message" doc:id="f5185103-dac9-4675-b0eb-0747e9519956">
+						<ee:message>
+							<ee:set-payload><![CDATA[%dw 2.0
+output application/java
+---
+vars.rootMessage.payload filter ($.Country == payload)]]></ee:set-payload>
+						</ee:message>
+					</ee:transform>
+					<file:write doc:id="c9f8bfdf-709d-498b-a08c-4668379a5ea0" doc:name="Accounts per country per date" path="#[vars.fileName]" mode="APPEND">
+			<file:content><![CDATA[#[output application/csv header=false
+---
+payload]]]></file:content>
+		</file:write>
+				</foreach>
+	</sub-flow>
+</mule>

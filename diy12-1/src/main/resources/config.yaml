@@ -1,0 +1,6 @@
+accounts:
+  folder:
+    out: "output/"
+  filename:
+    name: "flight-data"
+    ext: ".csv"

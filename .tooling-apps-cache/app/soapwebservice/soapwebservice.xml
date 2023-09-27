@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mule xmlns:ee="http://www.mulesoft.org/schema/mule/ee/core" xmlns:wsc="http://www.mulesoft.org/schema/mule/wsc"
+	xmlns:http="http://www.mulesoft.org/schema/mule/http"
+	xmlns="http://www.mulesoft.org/schema/mule/core" xmlns:doc="http://www.mulesoft.org/schema/mule/documentation" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/http/current/mule-http.xsd
+http://www.mulesoft.org/schema/mule/wsc http://www.mulesoft.org/schema/mule/wsc/current/mule-wsc.xsd
+http://www.mulesoft.org/schema/mule/ee/core http://www.mulesoft.org/schema/mule/ee/core/current/mule-ee.xsd">
+	<flow name="round-robin-ex" >
+  <scheduler doc:name="Scheduler" > <!-- 1 -->
+    <scheduling-strategy >
+      <fixed-frequency frequency="10" timeUnit="SECONDS"/>
+    </scheduling-strategy>
+  </scheduler>
+  <set-payload value="#[[1,2,3,4]]" doc:name="[1,2,3,4]" /> <!-- 2 -->
+  <logger level="INFO" doc:name="PAYLOAD BEFORE SCATTER GATHER"
+          category="PAYLOAD BEFORE SCATTER GATHER"
+  	message="#[payload]"/>
+		<scatter-gather doc:name="Scatter-Gather" doc:id="d3d255f4-ded2-479d-ba72-db3bfb9fc231" >
+			<route >
+				<set-payload value="#[payload - 4]" doc:name="payload - 4" />
+				<logger level="INFO" doc:name="ROUTE 1 PAYLOAD" message="#[%dw 2.0&#10;output application/json&#10;---&#10;{ 'r1' : payload}]" category="ROUTE 1 PAYLOAD" />
+			</route>
+			<route >
+				<set-payload value="#[payload + 5]" doc:name="payload + 5" />
+				<logger level="INFO" doc:name="ROUTE 2 PAYLOAD" message="#[%dw 2.0&#10;output application/json&#10;---&#10;{'r2' : payload}]" category="ROUTE 2 PAYLOAD" />
+			</route>
+		</scatter-gather>
+  <logger level="INFO" doc:name="PAYLOAD OUTSIDE SCATTER GATHER"
+           message="#[payload]"
+	   category="PAYLOAD OUTSIDE SCATTER GATHER"/> <!-- 5 -->
+</flow>
+
+</mule>
